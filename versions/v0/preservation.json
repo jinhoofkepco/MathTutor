@@ -1,0 +1,26 @@
+{
+  "version": "v0",
+  "source_commit": "216c5f3a34c1b9b448ca6e0d79133197df0e90d8",
+  "source_site": "https://mean-lab-6ab9c884.jinho.chatgpt.site",
+  "note": "Source, built site, native models, and standalone HTML frozen before the new work order. Deployment-specific binding omitted.",
+  "sha256": {
+    "README.md": "eba61a75a36de1dbe601cc51b66ea0f0d883cf68ecff662e06f3d9428d323cd8",
+    "standalone.html": "64118d4c32cab895631e581d420a2a1dac5f7e67b72928cb43bc9768fb2b6866",
+    "package-lock.json": "a66376dd836fcc2ca6280fa7790236ecaf1e38de2d21bff9f3cf13c0d4dc1926",
+    "package.json": "93304aed9f7b9973ad9c93996da5244dfd317611536f7738324823397e81b080",
+    "dist/index.html": "5c44e70dbb04a06127e3311303e5fc5ed5c29c6bf16a79a5c6e5051a725a4984",
+    "dist/styles.css": "17bd413ed9e4f589d8363d4ee6e877e3ffa7a9ab6b6a38286eb2f9feb27f30fa",
+    "dist/lab.js": "f007d94a97f789c43de4e78b199227c379131414caf754d3ad0d373c280be4a1",
+    "dist/assets/asset-specifications-v4.json": "7037df5aea2bfc41e62232b4e68822349fa0459458c4f71952e557aef378f88a",
+    "dist/assets/licenses.txt": "b0fc17d7a3c1d2d37e9d049359ed7a98474fa00f69ef8bdf300dee20f4d0a38a",
+    "dist/assets/mean-physics-kit-v4.glb": "734fe772bca4461daa066faffe6667b3e8ab4de81be304597cc317aac190424b",
+    "blender/build_assets_v4.py": "b1be7259b6252ac1133631e857c9619c58097471b2fdf6783c4dcf8dabede364",
+    "blender/README.md": "1bb555dd4422b90dc3d1a2ce87623d72fb54ef65e0ad5a7b5bfc45120ea1b824",
+    "blender/mean-physics-lab-v4.blend": "1e1e8d63a3abd69e904ae4bf6743a7e1d929fe03d020b0858b8e9ab2186f8023",
+    "src/apparatus.js": "f14626c6dcca85646bc4da1e402d5640832442b0ebb20b6c7415936d81fb40e3",
+    "src/core.js": "89dfb42492098c5236d1c0f005f5a97bc3f546b4343653b1719792f7089946fa",
+    "src/stage.js": "8d741873e7faebc53da15ba7e50b66b05a0828aedf6846000d58374274e8bca9",
+    "src/lab.js": "aee416afd6ee5094ca61aaf5e40b1c550e2e3a508561dbf74b88fb80e28f4830",
+    "src/sampling.js": "d7cff53a94ce7a10c5696eb2485c2f0960ed2792d5ff32960d1290f9940f0576"
+  }
+}

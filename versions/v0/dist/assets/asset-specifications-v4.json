@@ -1,0 +1,820 @@
+{
+  "blender_version": "5.2.0 LTS",
+  "transport": "isolated headless factory startup",
+  "units": "metres and kilograms",
+  "coordinate_transform": "Blender (x,y,z) -> glTF (x,z,-y)",
+  "gltf_up_axis": "Y",
+  "gltf_front_axis": "+Z",
+  "glb_bytes": 114928,
+  "assets": {
+    "Crate": {
+      "dimensions_gltf_xyz": [
+        0.64,
+        0.4,
+        0.48
+      ],
+      "dimensions_blender_xyz": [
+        0.64,
+        0.48,
+        0.4
+      ],
+      "vertices": 280,
+      "polygons": 270,
+      "material": "Colorable matte white",
+      "extras": {
+        "mass": 1,
+        "friction": 0.62,
+        "restitution": 0.04,
+        "collider": "box",
+        "rigidBodyType": "active",
+        "frontAxis": "glTF +Z",
+        "stackStep": 0.4,
+        "gltfDimensions": [
+          0.64,
+          0.4,
+          0.48
+        ],
+        "units": "metres / kilograms",
+        "authoring": "Blender 5.2 native mesh"
+      },
+      "local_origin": "geometric bounding-box center",
+      "applied_scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "Ball": {
+      "dimensions_gltf_xyz": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "dimensions_blender_xyz": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "vertices": 482,
+      "polygons": 512,
+      "material": "Colorable matte white",
+      "extras": {
+        "mass": 1,
+        "friction": 0.45,
+        "restitution": 0.04,
+        "collider": "sphere",
+        "rigidBodyType": "active",
+        "radius": 0.25,
+        "stackStep": 0.5,
+        "gltfDimensions": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "units": "metres / kilograms",
+        "authoring": "Blender 5.2 native mesh"
+      },
+      "local_origin": "geometric bounding-box center",
+      "applied_scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "Tube": {
+      "dimensions_gltf_xyz": [
+        0.54,
+        4.0,
+        0.54
+      ],
+      "dimensions_blender_xyz": [
+        0.54,
+        0.54,
+        4.0
+      ],
+      "vertices": 256,
+      "polygons": 256,
+      "material": "Clear wall | alpha 0.12",
+      "extras": {
+        "mass": 0,
+        "friction": 0.05,
+        "restitution": 0.02,
+        "collider": "mesh",
+        "rigidBodyType": "passive",
+        "innerDiameter": 0.51,
+        "outerDiameter": 0.54,
+        "height": 4,
+        "openTop": true,
+        "openBottom": true,
+        "recommendedDepthWrite": false,
+        "recommendedOpacity": 0.12,
+        "heightScaling": "Set scale.y; local geometry is Y-up and centered.",
+        "gltfDimensions": [
+          0.54,
+          4.0,
+          0.54
+        ],
+        "units": "metres / kilograms",
+        "authoring": "Blender 5.2 native mesh"
+      },
+      "local_origin": "geometric bounding-box center",
+      "applied_scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "Tank": {
+      "dimensions_gltf_xyz": [
+        0.752,
+        4.016,
+        0.492
+      ],
+      "dimensions_blender_xyz": [
+        0.752,
+        0.492,
+        4.016
+      ],
+      "vertices": 280,
+      "polygons": 270,
+      "material": "Clear wall | alpha 0.12",
+      "extras": {
+        "mass": 0,
+        "friction": 0.05,
+        "restitution": 0.04,
+        "collider": "mesh",
+        "rigidBodyType": "passive",
+        "innerDimensions": [
+          0.72,
+          4.0,
+          0.46
+        ],
+        "wallThickness": 0.016,
+        "openTop": true,
+        "recommendedOpacity": 0.12,
+        "recommendedDepthWrite": false,
+        "interiorFloorY": -1.992,
+        "interiorTopY": 2.008,
+        "gltfDimensions": [
+          0.752,
+          4.016,
+          0.492
+        ],
+        "units": "metres / kilograms",
+        "authoring": "Blender 5.2 native mesh"
+      },
+      "local_origin": "geometric bounding-box center",
+      "applied_scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "Rod": {
+      "dimensions_gltf_xyz": [
+        0.52,
+        1.0,
+        0.28
+      ],
+      "dimensions_blender_xyz": [
+        0.52,
+        0.28,
+        1.0
+      ],
+      "vertices": 56,
+      "polygons": 54,
+      "material": "Colorable matte white",
+      "extras": {
+        "mass": 1,
+        "friction": 0.62,
+        "restitution": 0.04,
+        "collider": "box",
+        "rigidBodyType": "active",
+        "heightScaling": "Set scale.y; original height is 1 metre.",
+        "gltfDimensions": [
+          0.52,
+          1.0,
+          0.28
+        ],
+        "units": "metres / kilograms",
+        "authoring": "Blender 5.2 native mesh"
+      },
+      "local_origin": "geometric bounding-box center",
+      "applied_scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "Pedestal": {
+      "dimensions_gltf_xyz": [
+        0.84,
+        0.14,
+        0.72
+      ],
+      "dimensions_blender_xyz": [
+        0.84,
+        0.72,
+        0.14
+      ],
+      "vertices": 280,
+      "polygons": 270,
+      "material": "Colorable matte white",
+      "extras": {
+        "mass": 0,
+        "friction": 0.62,
+        "restitution": 0.04,
+        "collider": "mesh",
+        "rigidBodyType": "passive",
+        "slotCount": 1,
+        "slotInnerDimensions": [
+          0.68,
+          0.03,
+          0.54
+        ],
+        "slotFloorY": 0.04,
+        "gltfDimensions": [
+          0.84,
+          0.14,
+          0.72
+        ],
+        "units": "metres / kilograms",
+        "authoring": "Blender 5.2 native mesh"
+      },
+      "local_origin": "geometric bounding-box center",
+      "applied_scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "Valve": {
+      "dimensions_gltf_xyz": [
+        0.327266,
+        0.327266,
+        0.1825
+      ],
+      "dimensions_blender_xyz": [
+        0.327266,
+        0.1825,
+        0.327266
+      ],
+      "vertices": 496,
+      "polygons": 428,
+      "material": "Warm brass",
+      "extras": {
+        "mass": 0,
+        "friction": 0.62,
+        "restitution": 0.04,
+        "collider": "convex_hull",
+        "rigidBodyType": "passive",
+        "frontAxis": "glTF +Z",
+        "gltfDimensions": [
+          0.327266,
+          0.327266,
+          0.1825
+        ],
+        "units": "metres / kilograms",
+        "authoring": "Blender 5.2 native mesh"
+      },
+      "local_origin": "geometric bounding-box center",
+      "applied_scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "gltf_verification": {
+    "flat_named_nodes": true,
+    "single_primitive_meshes": true,
+    "centered_bounds": true,
+    "alpha_mode": "BLEND",
+    "glass_alpha": 0.11999999731779099,
+    "node_scales": {
+      "Ball": [
+        1,
+        1,
+        1
+      ],
+      "Crate": [
+        1,
+        1,
+        1
+      ],
+      "Pedestal": [
+        1,
+        1,
+        1
+      ],
+      "Rod": [
+        1,
+        1,
+        1
+      ],
+      "Tank": [
+        1,
+        1,
+        1
+      ],
+      "Tube": [
+        1,
+        1,
+        1
+      ],
+      "Valve": [
+        1,
+        1,
+        1
+      ]
+    },
+    "node_rotations": {
+      "Ball": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "Crate": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "Pedestal": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "Rod": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "Tank": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "Tube": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "Valve": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "native_simulation": {
+    "engine": "Blender Bullet rigid bodies",
+    "frames": [
+      1,
+      180
+    ],
+    "fps": 60,
+    "substeps_per_frame": 12,
+    "solver_iterations": 100,
+    "gravity_blender_xyz": [
+      0,
+      0,
+      -9.81
+    ],
+    "active_bodies": 7,
+    "demo": "4 equal balls in hollow Tube; 3 equal crates in rectangular guides",
+    "equal_mass_kg": 1,
+    "baked": true,
+    "ball_final_heights": [
+      0.25,
+      0.749912,
+      1.249823,
+      1.749733
+    ],
+    "crate_final_heights": [
+      0.2,
+      0.6,
+      1.0
+    ],
+    "validation": "PASS: all seven fell under gravity and settled in their vertical guides",
+    "trace": [
+      {
+        "frame": 1,
+        "seconds": 0.0,
+        "centers_blender_xyz": {
+          "Demo_Ball_01": [
+            -1.001,
+            0.0,
+            0.6
+          ],
+          "Demo_Ball_02": [
+            -0.999,
+            0.0,
+            1.29
+          ],
+          "Demo_Ball_03": [
+            -1.001,
+            0.0,
+            1.98
+          ],
+          "Demo_Ball_04": [
+            -0.999,
+            0.0,
+            2.67
+          ],
+          "Demo_Crate_01": [
+            1.0,
+            0.0,
+            0.55
+          ],
+          "Demo_Crate_02": [
+            1.0,
+            0.0,
+            1.25
+          ],
+          "Demo_Crate_03": [
+            1.0,
+            0.0,
+            1.95
+          ]
+        }
+      },
+      {
+        "frame": 5,
+        "seconds": 0.0667,
+        "centers_blender_xyz": {
+          "Demo_Ball_01": [
+            -1.001,
+            0.0,
+            0.57783
+          ],
+          "Demo_Ball_02": [
+            -0.999,
+            0.0,
+            1.26783
+          ],
+          "Demo_Ball_03": [
+            -1.001,
+            0.0,
+            1.95783
+          ],
+          "Demo_Ball_04": [
+            -0.999,
+            0.0,
+            2.64783
+          ],
+          "Demo_Crate_01": [
+            1.0,
+            0.0,
+            0.52783
+          ],
+          "Demo_Crate_02": [
+            1.0,
+            0.0,
+            1.22783
+          ],
+          "Demo_Crate_03": [
+            1.0,
+            0.0,
+            1.92783
+          ]
+        }
+      },
+      {
+        "frame": 10,
+        "seconds": 0.15,
+        "centers_blender_xyz": {
+          "Demo_Ball_01": [
+            -1.001,
+            0.0,
+            0.489571
+          ],
+          "Demo_Ball_02": [
+            -0.999,
+            0.0,
+            1.179571
+          ],
+          "Demo_Ball_03": [
+            -1.001,
+            0.0,
+            1.869571
+          ],
+          "Demo_Ball_04": [
+            -0.999,
+            0.0,
+            2.559572
+          ],
+          "Demo_Crate_01": [
+            1.0,
+            0.0,
+            0.439571
+          ],
+          "Demo_Crate_02": [
+            1.0,
+            0.0,
+            1.139571
+          ],
+          "Demo_Crate_03": [
+            1.0,
+            0.0,
+            1.839571
+          ]
+        }
+      },
+      {
+        "frame": 20,
+        "seconds": 0.3167,
+        "centers_blender_xyz": {
+          "Demo_Ball_01": [
+            -1.001,
+            -0.0,
+            0.25
+          ],
+          "Demo_Ball_02": [
+            -0.999,
+            0.0,
+            0.804909
+          ],
+          "Demo_Ball_03": [
+            -1.001,
+            0.0,
+            1.494909
+          ],
+          "Demo_Ball_04": [
+            -0.999,
+            0.0,
+            2.184909
+          ],
+          "Demo_Crate_01": [
+            1.0,
+            0.000363,
+            0.203626
+          ],
+          "Demo_Crate_02": [
+            1.0,
+            0.0,
+            0.764909
+          ],
+          "Demo_Crate_03": [
+            1.0,
+            0.0,
+            1.464909
+          ]
+        }
+      },
+      {
+        "frame": 30,
+        "seconds": 0.4833,
+        "centers_blender_xyz": {
+          "Demo_Ball_01": [
+            -1.000625,
+            -5.1e-05,
+            0.25
+          ],
+          "Demo_Ball_02": [
+            -0.995303,
+            2.8e-05,
+            0.749972
+          ],
+          "Demo_Ball_03": [
+            -1.002051,
+            4e-06,
+            1.249925
+          ],
+          "Demo_Ball_04": [
+            -0.999111,
+            -1e-05,
+            1.749898
+          ],
+          "Demo_Crate_01": [
+            1.000139,
+            0.000543,
+            0.2
+          ],
+          "Demo_Crate_02": [
+            1.00085,
+            0.000591,
+            0.6
+          ],
+          "Demo_Crate_03": [
+            0.999502,
+            0.007309,
+            1.006541
+          ]
+        }
+      },
+      {
+        "frame": 45,
+        "seconds": 0.7333,
+        "centers_blender_xyz": {
+          "Demo_Ball_01": [
+            -1.00397,
+            -0.000158,
+            0.25
+          ],
+          "Demo_Ball_02": [
+            -0.995303,
+            3.9e-05,
+            0.749925
+          ],
+          "Demo_Ball_03": [
+            -1.004683,
+            0.000315,
+            1.249837
+          ],
+          "Demo_Ball_04": [
+            -0.996509,
+            0.000107,
+            1.74977
+          ],
+          "Demo_Crate_01": [
+            1.000125,
+            0.000645,
+            0.2
+          ],
+          "Demo_Crate_02": [
+            1.000762,
+            0.001093,
+            0.6
+          ],
+          "Demo_Crate_03": [
+            0.998451,
+            0.017464,
+            1.0
+          ]
+        }
+      },
+      {
+        "frame": 60,
+        "seconds": 0.9833,
+        "centers_blender_xyz": {
+          "Demo_Ball_01": [
+            -1.004692,
+            0.00014,
+            0.25
+          ],
+          "Demo_Ball_02": [
+            -0.995302,
+            -1.8e-05,
+            0.749912
+          ],
+          "Demo_Ball_03": [
+            -1.004691,
+            -0.000144,
+            1.249824
+          ],
+          "Demo_Ball_04": [
+            -0.995322,
+            -0.000416,
+            1.74973
+          ],
+          "Demo_Crate_01": [
+            1.000125,
+            0.000645,
+            0.2
+          ],
+          "Demo_Crate_02": [
+            1.000762,
+            0.001094,
+            0.6
+          ],
+          "Demo_Crate_03": [
+            0.998452,
+            0.017463,
+            1.0
+          ]
+        }
+      },
+      {
+        "frame": 90,
+        "seconds": 1.4833,
+        "centers_blender_xyz": {
+          "Demo_Ball_01": [
+            -1.004694,
+            0.000102,
+            0.25
+          ],
+          "Demo_Ball_02": [
+            -0.995302,
+            -5e-06,
+            0.749912
+          ],
+          "Demo_Ball_03": [
+            -1.004653,
+            0.000615,
+            1.249824
+          ],
+          "Demo_Ball_04": [
+            -0.995302,
+            1.5e-05,
+            1.749736
+          ],
+          "Demo_Crate_01": [
+            1.000124,
+            0.000645,
+            0.2
+          ],
+          "Demo_Crate_02": [
+            1.000761,
+            0.001093,
+            0.6
+          ],
+          "Demo_Crate_03": [
+            0.998451,
+            0.017458,
+            1.0
+          ]
+        }
+      },
+      {
+        "frame": 120,
+        "seconds": 1.9833,
+        "centers_blender_xyz": {
+          "Demo_Ball_01": [
+            -1.004695,
+            -7.1e-05,
+            0.25
+          ],
+          "Demo_Ball_02": [
+            -0.995302,
+            1.8e-05,
+            0.749911
+          ],
+          "Demo_Ball_03": [
+            -1.004695,
+            -7.1e-05,
+            1.249823
+          ],
+          "Demo_Ball_04": [
+            -0.995344,
+            -0.000596,
+            1.749735
+          ],
+          "Demo_Crate_01": [
+            1.000122,
+            0.000646,
+            0.2
+          ],
+          "Demo_Crate_02": [
+            1.000755,
+            0.001088,
+            0.6
+          ],
+          "Demo_Crate_03": [
+            0.998436,
+            0.017458,
+            1.0
+          ]
+        }
+      },
+      {
+        "frame": 180,
+        "seconds": 2.9833,
+        "centers_blender_xyz": {
+          "Demo_Ball_01": [
+            -1.004698,
+            1e-05,
+            0.25
+          ],
+          "Demo_Ball_02": [
+            -0.995302,
+            2e-05,
+            0.749912
+          ],
+          "Demo_Ball_03": [
+            -1.004696,
+            -4.1e-05,
+            1.249823
+          ],
+          "Demo_Ball_04": [
+            -0.995313,
+            0.00023,
+            1.749733
+          ],
+          "Demo_Crate_01": [
+            1.000121,
+            0.000645,
+            0.2
+          ],
+          "Demo_Crate_02": [
+            1.000756,
+            0.001091,
+            0.6
+          ],
+          "Demo_Crate_03": [
+            0.99844,
+            0.017464,
+            1.0
+          ]
+        }
+      }
+    ],
+    "reopened_blend_cache_verified": true
+  }
+}

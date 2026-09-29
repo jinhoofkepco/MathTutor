@@ -1,0 +1,37 @@
+import * as THREE from 'three';
+import * as CANNON from 'cannon-es';
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
+import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
+export {THREE};
+export const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
+export const colors={blue:0x285ccd,orange:0xeaa13f,teal:0x218e95,gray:0xbcc8d0,white:0xf5f5ee,ink:0x264055};
+export class Stage {
+  constructor(host){
+    this.host=host;this.root=new THREE.Group();this.bodies=[];this.picks=[];this.labels=[];this.numbers=false;this.h=6;this.mid=0;this.y=2;
+    this.renderer=new THREE.WebGLRenderer({antialias:true});this.renderer.setPixelRatio(Math.min(devicePixelRatio||1,2));this.renderer.setClearColor(0xedf1f3);this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=THREE.PCFSoftShadowMap;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.18;host.append(this.renderer.domElement);
+    this.scene=new THREE.Scene();this.camera=new THREE.OrthographicCamera(-6,6,3,-3,.05,150);this.orbit=new OrbitControls(this.camera,this.renderer.domElement);this.orbit.enableDamping=true;this.orbit.dampingFactor=.09;this.orbit.minZoom=.35;this.orbit.maxZoom=5;this.orbit.maxPolarAngle=Math.PI*.49;this.orbit.minPolarAngle=.03;
+    this.scene.add(new THREE.HemisphereLight(0xffffff,0x9fafc0,2.3));const sun=new THREE.DirectionalLight(0xfff4df,3.3);sun.position.set(-5,12,10);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-18;sun.shadow.camera.right=18;sun.shadow.camera.top=18;sun.shadow.camera.bottom=-18;sun.shadow.normalBias=.03;this.scene.add(sun);const fill=new THREE.DirectionalLight(0xbddcff,1.4);fill.position.set(6,5,-5);this.scene.add(fill);this.scene.add(this.root);
+    const ground=new THREE.Mesh(new THREE.PlaneGeometry(200,200),new THREE.MeshStandardMaterial({color:0xedf1f3,roughness:.95}));ground.rotation.x=-Math.PI/2;ground.position.y=-.03;ground.receiveShadow=true;this.scene.add(ground);
+    this.world=new CANNON.World({gravity:new CANNON.Vec3(0,-9.81,0)});this.world.broadphase=new CANNON.SAPBroadphase(this.world);this.world.solver.iterations=35;this.world.defaultContactMaterial.friction=.7;this.world.defaultContactMaterial.restitution=.04;
+    this.ray=new THREE.Raycaster();this.pointer=new THREE.Vector2();this.plane=new THREE.Plane(V(0,0,1),0);this.resize=()=>{const w=host.clientWidth||800,h=host.clientHeight||600;this.aspect=w/h;this.renderer.setSize(w,h);this.projection();};new ResizeObserver(this.resize).observe(host);this.resize();
+  }
+  async load(){const loader=new GLTFLoader();if(window.__MEAN_ASSET_V4__){const bytes=Uint8Array.from(atob(window.__MEAN_ASSET_V4__),c=>c.charCodeAt(0));this.kit=(await loader.parseAsync(bytes.buffer,'')).scene;}else this.kit=(await loader.loadAsync('./assets/mean-physics-kit-v4.glb')).scene;}
+  projection(){this.camera.left=-this.h*this.aspect/2;this.camera.right=this.h*this.aspect/2;this.camera.top=this.h/2;this.camera.bottom=-this.h/2;this.camera.updateProjectionMatrix();}
+  frame(width,height,mid=0,keep=false){this.mid=mid;this.y=Math.max(1,height/2);if(!keep){this.h=Math.max(height+1.1,(width+1.2)/this.aspect);this.camera.zoom=1;}this.projection();this.front();}
+  front(){this.orbit.target.set(this.mid,this.y,0);this.camera.position.set(this.mid,this.y+.015,24);this.camera.lookAt(this.orbit.target);this.orbit.update();}
+  iso(){this.camera.position.set(this.mid+8,this.y+8,22);this.camera.lookAt(this.orbit.target);this.orbit.update();}
+  zoom(factor){this.camera.zoom=Math.min(5,Math.max(.35,this.camera.zoom*factor));this.camera.updateProjectionMatrix();}
+  clear(){this.bodies.forEach(e=>this.world.removeBody(e.body));this.bodies=[];this.picks=[];this.labels=[];this.root.traverse(o=>{if(o.isMesh||o.isLine||o.isSprite){if(o.userData.owned)o.geometry?.dispose();const mats=Array.isArray(o.material)?o.material:[o.material];mats.forEach(m=>{if(o.isSprite)m.map?.dispose();m.dispose();});}});this.root.clear();}
+  model(name,pos=V(),color,scale=[1,1,1],meta={}){const src=this.kit.getObjectByName(name);if(!src)throw Error('Missing Blender asset: '+name);const mesh=src.clone();mesh.geometry=src.geometry;mesh.material=src.material.clone();if(color!==undefined)mesh.material.color.setHex(color);mesh.position.copy(pos);mesh.scale.set(...scale);mesh.castShadow=!['Tube','Tank'].includes(name);mesh.receiveShadow=true;mesh.userData={...meta,asset:name};if(['Tube','Tank'].includes(name)){mesh.material.transparent=true;mesh.material.opacity=.12;mesh.material.depthWrite=false;mesh.material.side=THREE.DoubleSide;mesh.renderOrder=3;}this.root.add(mesh);if(meta.kind)this.picks.push(mesh);return mesh;}
+  box(w,h,d,pos,color,opacity=1){const mesh=new THREE.Mesh(new THREE.BoxGeometry(w,Math.max(.001,h),d),new THREE.MeshStandardMaterial({color,roughness:.4,transparent:opacity<1,opacity,depthWrite:opacity===1}));mesh.position.copy(pos);mesh.userData.owned=true;mesh.castShadow=opacity===1;mesh.receiveShadow=true;this.root.add(mesh);return mesh;}
+  line(points,color=colors.gray,dashed=false){const g=new THREE.BufferGeometry().setFromPoints(points),m=dashed?new THREE.LineDashedMaterial({color,dashSize:.11,gapSize:.07}):new THREE.LineBasicMaterial({color});const l=new THREE.Line(g,m);l.userData.owned=true;if(dashed)l.computeLineDistances();this.root.add(l);return l;}
+  label(text,pos,color='#52687b',size=.22,numeric=false){const canvas=document.createElement('canvas');canvas.width=512;canvas.height=96;const ctx=canvas.getContext('2d');ctx.font='600 42px system-ui';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle=color;ctx.fillText(text,256,48);const spr=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(canvas),transparent:true,depthTest:false}));spr.position.copy(pos);spr.scale.set(size*5.333,size,1);spr.userData.numeric=numeric;spr.visible=!numeric||this.numbers;this.root.add(spr);this.labels.push(spr);return spr;}
+  numeric(on){this.numbers=on;this.labels.forEach(l=>l.visible=!l.userData.numeric||on);}
+  body(mesh,pos,shape,mass=1,drop=0,meta={}){const body=new CANNON.Body({mass,shape:shape==='sphere'?new CANNON.Sphere(.25):new CANNON.Box(new CANNON.Vec3(...shape)),position:new CANNON.Vec3(pos.x,pos.y+drop,pos.z),fixedRotation:true,linearDamping:.1,allowSleep:true,sleepSpeedLimit:.01,sleepTimeLimit:.4});body.linearFactor.set(0,1,0);this.world.addBody(body);const entry={mesh,body,...meta};this.bodies.push(entry);if(mesh)mesh.position.copy(body.position);return entry;}
+  floor(x,width,depth=.72,y=.05){return this.body(null,V(x,y,0),[width/2,.04,depth/2],0);}
+  rail(x0,x1,y,color=colors.orange,meta){const b=this.box(Math.max(.1,x1-x0),.035,.055,V((x0+x1)/2,y,.42),color);if(meta){b.userData={...b.userData,...meta};this.picks.push(b);}return b;}
+  pick(event){const r=this.renderer.domElement.getBoundingClientRect();this.pointer.set((event.clientX-r.left)/r.width*2-1,-(event.clientY-r.top)/r.height*2+1);this.ray.setFromCamera(this.pointer,this.camera);return this.ray.intersectObjects(this.picks,false)[0]?.object;}
+  point(event){this.pick(event);return this.ray.ray.intersectPlane(this.plane,V());}
+  step(dt){this.world.step(1/90,Math.min(dt,.2),24);this.bodies.forEach(e=>{if(e.mesh){e.mesh.position.copy(e.body.position);e.mesh.quaternion.copy(e.body.quaternion);}});}
+  render(){this.orbit.update();this.renderer.render(this.scene,this.camera);}
+}
