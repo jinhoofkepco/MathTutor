@@ -1,0 +1,146 @@
+[
+  {
+    "id": "E0-intro",
+    "text": "어느 팀이 더 잘했을까? 공평하게 비교할 방법을 정해 봐.",
+    "file": "E0-intro.mp3",
+    "duration": 4.116871
+  },
+  {
+    "id": "E0-method",
+    "text": "네 방법을 기억해 두자. 인원수도 함께 살펴볼까?",
+    "file": "E0-method.mp3",
+    "duration": 3.625986
+  },
+  {
+    "id": "E0-predict",
+    "text": "각 팀의 점수를 한 사람씩 똑같이 나누면, 어느 높이가 될까?",
+    "file": "E0-predict.mp3",
+    "duration": 4.210113
+  },
+  {
+    "id": "E0-develop",
+    "text": "한 사람당 몫을 맞추는 방법도 살펴보자.",
+    "file": "E0-develop.mp3",
+    "duration": 3.102132
+  },
+  {
+    "id": "E0-question",
+    "text": "고르기 전과 후에 그대로 남은 것은 무엇일까?",
+    "file": "E0-question.mp3",
+    "duration": 2.851837
+  },
+  {
+    "id": "E0-discover",
+    "text": "팀 안에서 옮기기만 했으니, 총합은 그대로야. 같은 몫으로 두 팀을 비교할 수도 있어.",
+    "file": "E0-discover.mp3",
+    "duration": 5.753832
+  },
+  {
+    "id": "E0-generate",
+    "text": "네 명인 팀을 만들어 봐. 에이 팀과 한 사람당 몫이 같아야 해.",
+    "file": "E0-generate.mp3",
+    "duration": 4.183265
+  },
+  {
+    "id": "E1-friend",
+    "text": "작은 것부터 세우면 가운데가 사야. 그러니까 평균도 사야.",
+    "file": "E1-friend.mp3",
+    "duration": 4.089388
+  },
+  {
+    "id": "E1-predict",
+    "text": "네 생각은 어때? 높이를 정하고, 얼마나 확신하는지도 알려 줘.",
+    "file": "E1-predict.mp3",
+    "duration": 4.520249
+  },
+  {
+    "id": "E1-develop",
+    "text": "넘치는 곳에서 빈자리로 옮겨 보자.",
+    "file": "E1-develop.mp3",
+    "duration": 2.395329
+  },
+  {
+    "id": "E1-compare",
+    "text": "네 예상과 친구의 표시를 다시 살펴봐.",
+    "file": "E1-compare.mp3",
+    "duration": 2.778458
+  },
+  {
+    "id": "E1-question",
+    "text": "처음에는 없었는데, 고르고 나니 생긴 높이가 있니?",
+    "file": "E1-question.mp3",
+    "duration": 3.484853
+  },
+  {
+    "id": "E1-discover",
+    "text": "평균은 처음 자료 속에 없는 값일 수도 있어.",
+    "file": "E1-discover.mp3",
+    "duration": 3.104989
+  },
+  {
+    "id": "E1-generate",
+    "text": "기둥 네 개의 평균을 육으로 만들어 봐. 단, 높이가 육인 기둥은 하나도 없게.",
+    "file": "E1-generate.mp3",
+    "duration": 5.197098
+  },
+  {
+    "id": "common-reconstruct",
+    "text": "방금 본 장면을 순서대로 놓아 봐.",
+    "file": "common-reconstruct.mp3",
+    "duration": 2.350567
+  },
+  {
+    "id": "common-bypass",
+    "text": "어떻게 그렇게 빨리 알았어? 이유 좀 알려 줘.",
+    "file": "common-bypass.mp3",
+    "duration": 3.199683
+  },
+  {
+    "id": "common-seal",
+    "text": "개수 곱하기 평균은 총합.",
+    "file": "common-seal.mp3",
+    "duration": 1.841814
+  },
+  {
+    "id": "variation1-false",
+    "text": "이번 평균은 가장 작은 값과 가장 큰 값의 중간이야. 오 점 오라고 생각해.",
+    "file": "variation1-false.mp3",
+    "duration": 5.460658
+  },
+  {
+    "id": "variation1-true",
+    "text": "이번 평균은 육이야.",
+    "file": "variation1-true.mp3",
+    "duration": 1.420317
+  },
+  {
+    "id": "variation2-false",
+    "text": "가장 큰 값과 작은 값의 중간이 평균이지. 사 점 오야.",
+    "file": "variation2-false.mp3",
+    "duration": 4.105624
+  },
+  {
+    "id": "variation2-true",
+    "text": "이번 평균은 사이야.",
+    "file": "variation2-true.mp3",
+    "duration": 1.408707
+  },
+  {
+    "id": "common-generate-retry",
+    "text": "네가 만든 모습과 목표 높이를 나란히 살펴봐.",
+    "file": "common-generate-retry.mp3",
+    "duration": 3.219592
+  },
+  {
+    "id": "common-vote",
+    "text": "반 전체의 생각을 모은 뒤에 이어가자.",
+    "file": "common-vote.mp3",
+    "duration": 2.350567
+  },
+  {
+    "id": "common-replay",
+    "text": "이 두 장면 사이만 다시 살펴보자.",
+    "file": "common-replay.mp3",
+    "duration": 2.441995
+  }
+]

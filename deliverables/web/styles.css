@@ -1,0 +1,785 @@
+:root {
+  font-family:
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: #334a60;
+  background: #f4f5f4;
+  font-size: 14px;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 380px;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+  border: 1px solid #d1d9dd;
+  border-radius: 10px;
+  padding: 10px 17px;
+  min-height: 42px;
+  background: #fbfcfb;
+  color: #42596d;
+}
+button:hover {
+  background: #e7edef;
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+.card:focus-visible {
+  outline: 3px solid #7d5bd6;
+  outline-offset: 3px;
+}
+.primary {
+  background: #5b7a99;
+  color: #fff;
+  border-color: #5b7a99;
+  min-width: 130px;
+}
+.secondary {
+  background: transparent;
+}
+.brand {
+  font:
+    600 30px Georgia,
+    serif;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #5b7a99;
+}
+.brand span {
+  font: 550 14px system-ui;
+  color: #5a6f7e;
+}
+header {
+  height: 62px;
+  display: flex;
+  align-items: center;
+  padding: 0 28px;
+  gap: 24px;
+  border-bottom: 1px solid #dde2e3;
+  background: #fafbf9;
+}
+#episode-label {
+  font-size: 12px;
+  color: #788997;
+}
+#steps {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+}
+#steps span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #d8dfe2;
+}
+#steps span.current {
+  background: #5b7a99;
+  width: 20px;
+  border-radius: 3px;
+}
+#settings {
+  border: 0;
+  background: transparent;
+  font-size: 18px;
+  padding: 8px;
+}
+#hub {
+  max-width: 960px;
+  margin: auto;
+  padding: 65px 28px;
+}
+.hub-heading span {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: #7a8c99;
+}
+.hub-heading h1 {
+  font-size: 30px;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+  margin: 12px 0 35px;
+}
+.episode-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.episode-card {
+  text-align: left;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr;
+  background: #fafbf9;
+  box-shadow: 0 5px 20px #334a6005;
+}
+.episode-card > span {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #83949f;
+}
+.episode-card svg {
+  width: 100%;
+  height: 170px;
+  margin: 5px 0 18px;
+}
+.episode-card strong {
+  font-size: 18px;
+  font-weight: 550;
+  letter-spacing: -0.03em;
+}
+.episode-card small {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #81919c;
+}
+.classroom-link {
+  display: block;
+  margin: 28px 0;
+  text-align: right;
+  font-size: 12px;
+  color: #82919b;
+  text-decoration: none;
+}
+.module-picker {
+  margin-top: 35px;
+}
+.module-picker h2 {
+  font-size: 14px;
+}
+.module-picker button {
+  font-size: 11px;
+  margin: 4px;
+  padding: 8px;
+  min-height: 34px;
+}
+#lesson {
+  height: calc(100dvh - 62px);
+  min-height: 610px;
+  display: grid;
+  grid-template-rows: minmax(310px, 1fr) auto 56px;
+}
+#visual-wrap {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+}
+#stage,
+#flat {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+#stage canvas {
+  display: block;
+  touch-action: none;
+}
+#flat {
+  position: absolute;
+  inset: 0;
+}
+#phase-label {
+  position: absolute;
+  left: 26px;
+  top: 20px;
+  color: #81929d;
+  font-size: 11px;
+  letter-spacing: 0.07em;
+}
+#view-controls {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  display: flex;
+  gap: 4px;
+}
+#view-controls button {
+  min-height: 30px;
+  min-width: 30px;
+  padding: 4px 7px;
+  background: #fafbf9c9;
+  font-size: 17px;
+}
+#legend {
+  position: absolute;
+  left: 26px;
+  bottom: 12px;
+  display: flex;
+  gap: 17px;
+  font-size: 11px;
+}
+.prediction {
+  color: #7d5bd6;
+}
+.friend {
+  color: #778872;
+}
+.actual {
+  color: #e04a3f;
+}
+#caption {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 85%;
+  background: #243542e8;
+  color: #fff;
+  border-radius: 7px;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.65;
+  text-align: center;
+}
+#audio-status {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  color: #778b9a;
+  white-space: nowrap;
+}
+#loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #f4f5f4;
+  font-size: 50px;
+}
+#interaction {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 28px;
+  background: #fafbf9;
+  border-top: 1px solid #dce2e4;
+  min-height: 94px;
+  max-height: 330px;
+  overflow: auto;
+}
+#interaction h1 {
+  font-size: 16px;
+  letter-spacing: -0.04em;
+  font-weight: 550;
+  margin: 0;
+  line-height: 1.5;
+}
+#interaction textarea {
+  resize: none;
+  width: 300px;
+  height: 65px;
+  border: 1px solid #ced8df;
+  background: white;
+  border-radius: 9px;
+  padding: 10px;
+}
+#interaction input[type="text"] {
+  border: 1px solid #ced8df;
+  border-radius: 9px;
+  background: white;
+  padding: 12px;
+  width: 280px;
+}
+input[type="range"] {
+  accent-color: #5b7a99;
+  cursor: pointer;
+  min-width: 0;
+  height: 26px;
+  touch-action: pan-y;
+}
+.prediction-controls {
+  display: flex;
+  gap: 20px;
+}
+.predict-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #7d5bd6;
+}
+.predict-control input {
+  width: 170px;
+  accent-color: #7d5bd6;
+}
+.predict-control output {
+  width: 30px;
+  font-variant-numeric: tabular-nums;
+}
+.confidence {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #84929b;
+  font-size: 11px;
+}
+.confidence input {
+  width: 88px;
+}
+.confidence output {
+  width: 12px;
+  color: #475f72;
+}
+.choices {
+  display: flex;
+  gap: 12px;
+}
+.learner-note {
+  font-size: 13px;
+  color: #6b7f8e;
+  border-left: 2px solid #a9b9c6;
+  padding-left: 14px;
+  max-width: 350px;
+  line-height: 1.5;
+}
+.build-controls {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  gap: 15px;
+  max-width: 560px;
+}
+.build-controls label {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #8796a1;
+}
+.build-controls input {
+  width: 100%;
+}
+.build-controls output {
+  color: #42596d;
+  width: 18px;
+}
+#transport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 7px 20px;
+  border-top: 1px solid #e1e5e6;
+  background: #fafbf9;
+}
+#transport button {
+  padding: 4px 10px;
+  min-height: 34px;
+  min-width: 36px;
+}
+#transport label {
+  color: #93a0a7;
+  margin-left: 10px;
+}
+#scrub {
+  width: min(35vw, 380px);
+  accent-color: #8da0b0;
+}
+#speed {
+  width: 100px;
+}
+#speed-out {
+  font-size: 11px;
+  width: 28px;
+  color: #7e919e;
+}
+.cards {
+  display: flex;
+  gap: 10px;
+  max-width: 610px;
+}
+.card {
+  width: 125px;
+  border: 1px solid #d2dce0;
+  border-radius: 9px;
+  background: #f4f5f4;
+  touch-action: none;
+  cursor: grab;
+  user-select: none;
+}
+.card.dragging {
+  box-shadow: 0 0 0 2px #7d5bd6;
+}
+.card svg {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+}
+.card-arrows {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 6px 6px;
+  color: #91a1ac;
+  font-size: 11px;
+}
+.card-arrows button {
+  border: 0;
+  background: transparent;
+  min-height: 26px;
+  min-width: 26px;
+  padding: 1px 5px;
+  font-size: 18px;
+}
+#seal-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f4f5f4;
+}
+#seal-equation {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  white-space: nowrap;
+  background: #fafbf9dd;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+#seal-equation strong {
+  font-size: 17px;
+  font-weight: 500;
+}
+#seal-equation > span:last-child {
+  font-size: 13px;
+  color: #7c7042;
+}
+.seal-symbol {
+  color: #d4b643;
+  font-size: 24px;
+}
+.calculation {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.calculation input {
+  width: 85px;
+  border: 1px solid #cad5dd;
+  border-radius: 7px;
+  padding: 10px;
+}
+.calibration {
+  display: flex;
+  gap: 40px;
+  align-items: flex-end;
+}
+.calibration > div {
+  display: grid;
+  gap: 5px;
+  min-width: 65px;
+  text-align: center;
+  color: #7c8e9c;
+}
+.calibration-track {
+  height: 95px;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid #aab8c1;
+}
+.calibration-track span {
+  width: 100%;
+  background: #5b7a99;
+}
+dialog {
+  border: 1px solid #d3dde0;
+  border-radius: 16px;
+  padding: 28px;
+  color: #42596d;
+  width: calc(100% - 36px);
+  max-width: 450px;
+  box-shadow: 0 25px 100px #34465535;
+}
+dialog::backdrop {
+  background: #273d5060;
+  backdrop-filter: blur(3px);
+}
+dialog h2 {
+  font-size: 19px;
+  font-weight: 550;
+  margin-top: 0;
+}
+dialog label {
+  display: block;
+  line-height: 2.8;
+}
+dialog > button,
+dialog > a {
+  display: block;
+  margin: 18px 0;
+  color: #5b7a99;
+}
+dialog p {
+  font-size: 12px;
+  color: #8c9aa3;
+}
+.close {
+  float: right;
+  border: 0;
+  background: transparent;
+  margin: -15px -13px 0 0;
+  font-size: 22px;
+  min-height: 25px;
+  padding: 0 7px;
+}
+dialog textarea {
+  width: 100%;
+  border: 1px solid #cad6de;
+  border-radius: 8px;
+  padding: 10px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+[hidden] {
+  display: none !important;
+}
+@media (max-width: 800px) {
+  header {
+    padding: 0 17px;
+    gap: 15px;
+  }
+  #lesson {
+    grid-template-rows: minmax(290px, 1fr) auto 56px;
+  }
+  #interaction {
+    gap: 14px;
+    padding: 16px 20px;
+  }
+  #interaction h1 {
+    font-size: 14px;
+  }
+  .prediction-controls {
+    gap: 14px;
+  }
+  .predict-control input {
+    width: 120px;
+  }
+  .build-controls {
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
+    gap: 6px 20px;
+  }
+  .cards {
+    gap: 7px;
+  }
+  .card {
+    width: 100px;
+  }
+  .card svg {
+    height: 80px;
+  }
+  #seal-equation strong {
+    font-size: 15px;
+  }
+  #seal-equation {
+    gap: 12px;
+  }
+}
+@media (max-width: 540px) {
+  header {
+    height: 54px;
+    padding: 0 13px;
+    gap: 12px;
+  }
+  .brand span {
+    font-size: 12px;
+  }
+  #steps {
+    gap: 4px;
+  }
+  .brand {
+    font-size: 27px;
+  }
+  #lesson {
+    height: calc(100dvh - 54px);
+    min-height: 630px;
+    grid-template-rows: minmax(300px, 1fr) auto 52px;
+  }
+  #hub {
+    padding: 40px 19px;
+  }
+  .hub-heading h1 {
+    font-size: 25px;
+  }
+  .episode-cards {
+    gap: 12px;
+  }
+  .episode-card {
+    padding: 15px;
+  }
+  .episode-card svg {
+    height: 130px;
+  }
+  .episode-card strong {
+    font-size: 16px;
+  }
+  .episode-card small {
+    font-size: 10px;
+  }
+  #interaction {
+    gap: 12px;
+    padding: 15px;
+    max-height: 285px;
+  }
+  #interaction h1 {
+    width: 100%;
+    text-align: center;
+  }
+  .prediction-controls {
+    width: 100%;
+    justify-content: center;
+  }
+  .predict-control input {
+    width: 100px;
+  }
+  .confidence {
+    font-size: 10px;
+  }
+  .confidence input {
+    width: 74px;
+  }
+  .primary {
+    min-width: 115px;
+    padding: 9px 13px;
+  }
+  #phase-label {
+    left: 15px;
+    top: 16px;
+  }
+  #view-controls {
+    right: 10px;
+    top: 12px;
+    gap: 3px;
+  }
+  #view-controls button {
+    min-width: 28px;
+    min-height: 28px;
+  }
+  .cards {
+    width: 100%;
+    gap: 6px;
+  }
+  .card {
+    width: calc((100% - 18px) / 4);
+  }
+  .card svg {
+    height: 75px;
+    padding: 5px;
+  }
+  #transport {
+    gap: 8px;
+    padding: 6px 12px;
+  }
+  #scrub {
+    width: 100%;
+    flex: 1;
+  }
+  #speed {
+    width: 75px;
+  }
+  #transport button {
+    min-width: 30px;
+    padding: 4px 7px;
+  }
+  #transport label {
+    margin-left: 2px;
+  }
+  .build-controls {
+    width: 100%;
+    max-width: 350px;
+  }
+  .choices {
+    gap: 8px;
+  }
+  .choices button {
+    padding: 9px 14px;
+  }
+  #legend {
+    left: 15px;
+    font-size: 10px;
+    gap: 12px;
+  }
+  #seal-equation {
+    bottom: 25px;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 270px;
+  }
+  #seal-equation strong {
+    font-size: 15px;
+  }
+  #seal-equation > span:last-child {
+    width: 100%;
+    text-align: center;
+  }
+  #caption {
+    font-size: 12px;
+    bottom: 25px;
+  }
+  .calculation {
+    font-size: 12px;
+  }
+  #interaction textarea {
+    width: calc(100% - 55px);
+  }
+  #episode-label {
+    font-size: 10px;
+  }
+  #settings {
+    padding: 3px;
+  }
+  .module-picker button {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+  }
+}
+
+#scene-labels {
+  position: absolute;
+  right: 22px;
+  bottom: 13px;
+  color: #8898a2;
+  font-size: 10px;
+  pointer-events: none;
+}

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f4f5f4" />
+    <meta
+      name="description"
+      content="예상하고, 고르고, 직접 만드는 평균 개념 학습 E0·E1"
+    />
+    <title>MathTutor · 평균</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%235B7A99'/%3E%3Ctext x='7' y='24' font-size='26' fill='white'%3Eμ%3C/text%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <header>
+      <button id="home" class="brand" aria-label="시작 화면">
+        μ <span>MathTutor</span></button
+      ><span id="episode-label"></span>
+      <div id="steps" aria-label="진행 단계"></div>
+      <button id="settings" aria-label="설정">⚙</button>
+    </header>
+    <main>
+      <section id="hub"></section>
+      <section id="lesson" hidden>
+        <div id="visual-wrap">
+          <div id="stage" tabindex="0" aria-label="학습 장면"></div>
+          <svg id="flat" aria-label="평면 학습 장면" hidden></svg>
+          <div id="scene-labels"></div>
+          <div id="phase-label"></div>
+          <div id="legend" hidden></div>
+          <div id="view-controls">
+            <button id="zoom-in" aria-label="확대">+</button
+            ><button id="zoom-out" aria-label="축소">−</button
+            ><button id="front" aria-label="정면">▤</button
+            ><button id="fit" aria-label="전체 보기">⊡</button>
+          </div>
+          <div id="caption" hidden></div>
+          <div id="audio-status" role="status"></div>
+          <video
+            id="seal-video"
+            playsinline
+            muted
+            preload="metadata"
+            hidden
+          ></video>
+          <div id="seal-equation" hidden></div>
+          <div id="loading">◌</div>
+        </div>
+        <section id="interaction" aria-live="polite"></section>
+        <div id="transport">
+          <button id="pause" aria-label="일시 정지">Ⅱ</button
+          ><button id="audio" aria-label="내레이션 다시 듣기">◖))</button
+          ><input
+            id="scrub"
+            type="range"
+            min="0"
+            max="0"
+            step=".001"
+            value="0"
+            aria-label="이미 본 구간 되감기"
+            disabled
+          /><label for="speed">◷</label
+          ><input
+            id="speed"
+            type="range"
+            min=".5"
+            max="2"
+            value="1"
+            step=".25"
+            aria-label="재생 속도"
+          /><output id="speed-out">1×</output>
+        </div>
+      </section>
+    </main>
+    <dialog id="settings-dialog">
+      <form method="dialog">
+        <button class="close" aria-label="닫기">×</button>
+      </form>
+      <h2>설정</h2>
+      <label><input type="checkbox" id="captions-setting" /> 접근성 자막</label
+      ><label><input type="checkbox" id="mute-setting" /> 무음</label
+      ><button id="export-log">기록 내보내기</button
+      ><a href="?classroom=1">교실 모드</a>
+      <p>기록은 이 브라우저에만 저장됩니다.</p>
+    </dialog>
+    <dialog id="reflection-dialog">
+      <h2>어떻게 그렇게 빨리 알았어?</h2>
+      <label for="reflection">이유</label
+      ><textarea id="reflection" rows="3"></textarea
+      ><button id="reflection-submit" disabled>이어가기</button>
+    </dialog>
+    <noscript>JavaScript를 켜 주세요.</noscript>
+    <script src="app.bundle.js" defer></script>
+  </body>
+</html>

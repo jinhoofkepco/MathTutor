@@ -1,0 +1,346 @@
+{
+  "reopened_native_file": true,
+  "blender_version": "4.5.14 LTS",
+  "unitcube_dimensions": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "seal_orthographic": true,
+  "seal_frame_count": 150,
+  "seal_data_units": 12,
+  "no_text_objects": true,
+  "animation_samples": {
+    "1": {
+      "positions_blender_xyz": {
+        "Seal_Column_1_Unit_1": [
+          -2.025,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_1_Unit_2": [
+          -2.025,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_2_Unit_1": [
+          -0.675,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_2_Unit_2": [
+          -0.675,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_2_Unit_3": [
+          -0.675,
+          0.0,
+          2.5
+        ],
+        "Seal_Column_2_Unit_4": [
+          -0.675,
+          0.0,
+          3.5
+        ],
+        "Seal_Column_3_Unit_1": [
+          0.675,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_3_Unit_2": [
+          0.675,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_4_Unit_1": [
+          2.025,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_4_Unit_2": [
+          2.025,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_4_Unit_3": [
+          2.025,
+          0.0,
+          2.5
+        ],
+        "Seal_Column_4_Unit_4": [
+          2.025,
+          0.0,
+          3.5
+        ]
+      },
+      "cube_alpha": 1.0,
+      "rectangle_alpha": 0.0
+    },
+    "74": {
+      "positions_blender_xyz": {
+        "Seal_Column_1_Unit_1": [
+          -2.025,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_1_Unit_2": [
+          -2.025,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_2_Unit_1": [
+          -0.675,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_2_Unit_2": [
+          -0.675,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_2_Unit_3": [
+          -0.675,
+          0.0,
+          2.5
+        ],
+        "Seal_Column_2_Unit_4": [
+          -2.025,
+          0.0,
+          2.5
+        ],
+        "Seal_Column_3_Unit_1": [
+          0.675,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_3_Unit_2": [
+          0.675,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_4_Unit_1": [
+          2.025,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_4_Unit_2": [
+          2.025,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_4_Unit_3": [
+          2.025,
+          0.0,
+          2.5
+        ],
+        "Seal_Column_4_Unit_4": [
+          0.675,
+          0.0,
+          2.5
+        ]
+      },
+      "cube_alpha": 1.0,
+      "rectangle_alpha": 0.0
+    },
+    "111": {
+      "positions_blender_xyz": {
+        "Seal_Column_1_Unit_1": [
+          -1.5,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_1_Unit_2": [
+          -1.5,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_2_Unit_1": [
+          -0.5,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_2_Unit_2": [
+          -0.5,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_2_Unit_3": [
+          -0.5,
+          0.0,
+          2.5
+        ],
+        "Seal_Column_2_Unit_4": [
+          -1.5,
+          0.0,
+          2.5
+        ],
+        "Seal_Column_3_Unit_1": [
+          0.5,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_3_Unit_2": [
+          0.5,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_4_Unit_1": [
+          1.5,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_4_Unit_2": [
+          1.5,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_4_Unit_3": [
+          1.5,
+          0.0,
+          2.5
+        ],
+        "Seal_Column_4_Unit_4": [
+          0.5,
+          0.0,
+          2.5
+        ]
+      },
+      "cube_alpha": 1.0,
+      "rectangle_alpha": 0.0
+    },
+    "129": {
+      "positions_blender_xyz": {
+        "Seal_Column_1_Unit_1": [
+          -1.5,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_1_Unit_2": [
+          -1.5,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_2_Unit_1": [
+          -0.5,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_2_Unit_2": [
+          -0.5,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_2_Unit_3": [
+          -0.5,
+          0.0,
+          2.5
+        ],
+        "Seal_Column_2_Unit_4": [
+          -1.5,
+          0.0,
+          2.5
+        ],
+        "Seal_Column_3_Unit_1": [
+          0.5,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_3_Unit_2": [
+          0.5,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_4_Unit_1": [
+          1.5,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_4_Unit_2": [
+          1.5,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_4_Unit_3": [
+          1.5,
+          0.0,
+          2.5
+        ],
+        "Seal_Column_4_Unit_4": [
+          0.5,
+          0.0,
+          2.5
+        ]
+      },
+      "cube_alpha": 0.0,
+      "rectangle_alpha": 0.5
+    },
+    "150": {
+      "positions_blender_xyz": {
+        "Seal_Column_1_Unit_1": [
+          -1.5,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_1_Unit_2": [
+          -1.5,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_2_Unit_1": [
+          -0.5,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_2_Unit_2": [
+          -0.5,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_2_Unit_3": [
+          -0.5,
+          0.0,
+          2.5
+        ],
+        "Seal_Column_2_Unit_4": [
+          -1.5,
+          0.0,
+          2.5
+        ],
+        "Seal_Column_3_Unit_1": [
+          0.5,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_3_Unit_2": [
+          0.5,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_4_Unit_1": [
+          1.5,
+          0.0,
+          0.5
+        ],
+        "Seal_Column_4_Unit_2": [
+          1.5,
+          0.0,
+          1.5
+        ],
+        "Seal_Column_4_Unit_3": [
+          1.5,
+          0.0,
+          2.5
+        ],
+        "Seal_Column_4_Unit_4": [
+          0.5,
+          0.0,
+          2.5
+        ]
+      },
+      "cube_alpha": 0.0,
+      "rectangle_alpha": 0.5
+    }
+  },
+  "result": "PASS"
+}
